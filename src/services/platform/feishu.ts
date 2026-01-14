@@ -32,15 +32,21 @@ export const FeishuNotification = async ({
           template: (() => {
             switch (level) {
               case 0: // free
-                return 'blue';
-              case 1: // exprience
+                return 'gray';
+              case 1: // basic
                 return 'green';
-              case 2: // team
-                return 'purple';
-              case 3: // enterprice
+              case 2: // advanced
+                return 'blue';
+              case 3: // custom
                 return 'red';
-              case 4: // custom
-                return 'turquoise';
+              case 4: // experience
+                return 'green';
+              case 5: // team
+                return 'blue';
+              case 6: // enterprise
+                return 'red';
+              default:
+                return 'gray';
             }
           })(),
           title: {
