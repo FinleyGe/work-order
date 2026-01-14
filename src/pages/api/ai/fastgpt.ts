@@ -41,7 +41,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       chatId: orderId,
       stream: true,
       detail: false,
-      messages: userMessages
+      messages: userMessages,
+      customUid: `workorder-${orderId}`
     };
 
     res.setHeader('Access-Control-Allow-Origin', '*');
